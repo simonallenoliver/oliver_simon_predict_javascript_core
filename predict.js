@@ -146,4 +146,29 @@ function printNames(names) {
 printNames(beatles);
 
 
-// prediction: 
+// prediction: the names will be printed along with their index in order
+// actual output:
+//  Paul was found at index 0
+//  George was found at index 1
+//  John was found at index 2
+//  Ringo was found at index 3
+// the key names do not matter since indexing was used
+
+// Problem 9
+// Why did the code produce that output? Explain why each console.log looks the way it does.
+
+const planet = {
+	name:"Jupiter",
+	milesFromSun: 49849,
+	mass: 393983,
+            composition: ["gas", "liquid", "oxygen"]
+}
+const planetCopy = {...planet}
+console.log(planet.composition[0] === planetCopy.composition[0]) 
+console.log(planet === planetCopy)
+
+// prediction: a deep copy is made, true is printed, false is printed
+// actual output: 
+//      true
+//      false
+// the deep copy allows the outer parts of the object to be changes without affecting the original version, but the inner parts of the object are changed
